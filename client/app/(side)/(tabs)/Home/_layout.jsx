@@ -92,6 +92,11 @@ const HomeScreen = () => {
       screen: "Handwrite",
     },
     {
+      title: "Restaurant Review Prediction",
+      screen: "restaurant",
+    },
+
+    {
       title: "Image Classification with CIFAR-10",
       screen: "ImageClassificationCIFAR10",
     },

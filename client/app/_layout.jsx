@@ -28,6 +28,13 @@ const Layout = () => {
               headerBackTitleVisible: false,
             }}
           />
+          <Stack.Screen
+            name="restaurant"
+            options={{
+              title: "Restaurant Review Prediction",
+              headerBackTitleVisible: false,
+            }}
+          />
         </Stack>
       </ThemeProvider>
     </Provider>
