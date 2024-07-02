@@ -14,6 +14,14 @@ const Layout = () => {
           options={{ headerShown: false }}
         /> */}
           <Stack.Screen name="(side)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="HandwrittenDigitRecognition"
+            component={HandwrittenDigitRecognition}
+          />
+          <Stack.Screen
+            name="ImageClassificationCIFAR10"
+            component={ImageClassificationCIFAR10}
+          />
         </Stack>
       </ThemeProvider>
     </Provider>
