@@ -89,7 +89,7 @@ const HomeScreen = () => {
   const projects = [
     {
       title: "Handwritten Digit Recognition",
-      screen: "HandwrittenDigitRecognition",
+      screen: "Handwrite",
     },
     {
       title: "Image Classification with CIFAR-10",
@@ -112,7 +112,7 @@ const HomeScreen = () => {
       title: "Bird Species Classification",
       screen: "BirdSpeciesClassification",
     },
-    { title: "Comment sentiment analyzer", screen: "CommentSentimentAnalyzer" },
+    { title: "Comment sentiment analyzer", screen: "sentiment" },
   ];
 
   const handlePress = (screen) => {

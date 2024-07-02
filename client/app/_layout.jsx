@@ -15,12 +15,18 @@ const Layout = () => {
         /> */}
           <Stack.Screen name="(side)" options={{ headerShown: false }} />
           <Stack.Screen
-            name="HandwrittenDigitRecognition"
-            component={HandwrittenDigitRecognition}
+            name="Handwrite"
+            options={{
+              title: "Hand written Digit Recognition",
+              headerBackTitleVisible: false,
+            }}
           />
           <Stack.Screen
-            name="ImageClassificationCIFAR10"
-            component={ImageClassificationCIFAR10}
+            name="sentiment"
+            options={{
+              title: "Comment sentiment analyzer",
+              headerBackTitleVisible: false,
+            }}
           />
         </Stack>
       </ThemeProvider>
