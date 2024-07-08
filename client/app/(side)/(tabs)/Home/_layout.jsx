@@ -92,6 +92,10 @@ const HomeScreen = () => {
       screen: "Handwrite",
     },
     {
+      title: "NLP: Text Summarization",
+      screen: "text",
+    },
+    {
       title: "Restaurant Review Prediction",
       screen: "restaurant",
     },
