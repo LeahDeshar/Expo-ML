@@ -4,6 +4,8 @@
 
 **NPL: Text summarization** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/textsummary/main.ipynb)
 
+**Restaurant Review Prediction** -> [code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/restaurant/model.ipynb)
+
 <!-- insert link -->
 
 ## Output
