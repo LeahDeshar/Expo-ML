@@ -11,8 +11,6 @@ const _layout = () => {
 
 export default _layout;
 
-const styles = StyleSheet.create({});
-
 function Review() {
   const [review, setReview] = useState("");
   const [prediction, setPrediction] = useState(null);

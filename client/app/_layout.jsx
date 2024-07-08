@@ -29,9 +29,16 @@ const Layout = () => {
             }}
           />
           <Stack.Screen
+            name="text"
+            options={{
+              title: "NLP: Text Summarization",
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
             name="restaurant"
             options={{
-              title: "Restaurant Review Prediction",
+              title: "NLP: Restaurant Review Prediction",
               headerBackTitleVisible: false,
             }}
           />
@@ -42,9 +49,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
