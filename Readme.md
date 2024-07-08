@@ -1,29 +1,14 @@
-# House Price Prediction App
+# Machine Learning Projects with Expo
 
-This project is an application for predicting house prices based on given features. It consists of a frontend built with Expo React Native and a backend API developed with FastAPI, using a RandomForest algorithm for predictions.
+<!-- list the project with link of code -->
+
+**NPL: Text summarization** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/textsummary/main.ipynb)
+
+<!-- insert link -->
 
 ## Output
 
-![image](o.png)
-
-## Features
-
-- **Frontend (Expo React Native):**
-
-  - User-friendly interface for inputting house features.
-  - Sends HTTP requests to the backend API for predictions.
-  - Displays predicted house prices to the user.
-
-- **Backend (FastAPI):**
-
-  - Receives JSON input containing house features.
-  - Validates input data and preprocesses it for prediction.
-  - Uses a pre-trained RandomForest model to predict house prices.
-  - Returns predicted prices as JSON responses.
-
-- **RandomForest Algorithm:**
-  - Trained model for predicting house prices based on features like bedrooms, bathrooms, and square footage.
-  - Utilizes scikit-learn library for training and prediction.
+![image](images/o.png)
 
 ## Technologies Used
 
@@ -38,3 +23,4 @@ This project is an application for predicting house prices based on given featur
   - scikit-learn (for machine learning model)
   - joblib (for model serialization)
   - pandas (for data manipulation)
+  - other
