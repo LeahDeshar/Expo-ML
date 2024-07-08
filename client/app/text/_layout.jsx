@@ -144,9 +144,25 @@ const TextAreaComponent = () => {
           <Text style={styles.headerText}>Summary</Text>
           <Text>{summary}</Text>
 
-          <View>
-            <Text>Original Text Length: {length.origina_length}</Text>
-            <Text>Summary Text Length: {length.summary_length}</Text>
+          <View
+            style={{
+              marginTop: 10,
+            }}
+          >
+            <Text
+              style={{
+                color: "grey",
+              }}
+            >
+              Original Text Length: {length.origina_length}
+            </Text>
+            <Text
+              style={{
+                color: "grey",
+              }}
+            >
+              Summary Text Length: {length.summary_length}
+            </Text>
           </View>
         </View>
       )}

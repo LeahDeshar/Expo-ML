@@ -8,7 +8,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerLeft: () => <DrawerToggleButton tintColor="#000" />,
-        headerTitle: "House Price Predictor",
+        headerTitle: "Machine Learning Projects",
         headerStyle: { backgroundColor: "#3492eb" },
         headerStatusBarHeight: 55,
       }}

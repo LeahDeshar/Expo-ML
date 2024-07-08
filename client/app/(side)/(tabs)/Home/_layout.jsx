@@ -81,6 +81,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useTheme } from "../../../../constants/ThemeProvider";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 const HomeScreen = () => {
   const { colors, setScheme, dark } = useTheme();
@@ -90,38 +91,65 @@ const HomeScreen = () => {
     {
       title: "Handwritten Digit Recognition",
       screen: "Handwrite",
+      isCompleted: false,
     },
     {
       title: "NLP: Text Summarization",
       screen: "text",
+      isCompleted: true,
     },
     {
       title: "Restaurant Review Prediction",
       screen: "restaurant",
+      isCompleted: true,
     },
 
     {
       title: "Image Classification with CIFAR-10",
       screen: "ImageClassificationCIFAR10",
+      isCompleted: false,
     },
-    { title: "Face Detection", screen: "FaceDetection" },
+    { title: "Face Detection", screen: "FaceDetection", isCompleted: false },
     {
       title: "Object Detection with YOLO (You Only Look Once)",
       screen: "ObjectDetectionYOLO",
+      isCompleted: false,
     },
     {
       title: "Emotion Detection from Facial Expressions",
       screen: "EmotionDetection",
+      isCompleted: false,
     },
-    { title: "Dog Breed Classification", screen: "DogBreedClassification" },
-    { title: "Plant Species Recognition", screen: "PlantSpeciesRecognition" },
-    { title: "Traffic Sign Recognition", screen: "TrafficSignRecognition" },
-    { title: "Food Classification", screen: "FoodClassification" },
+    {
+      title: "Dog Breed Classification",
+      screen: "DogBreedClassification",
+      isCompleted: false,
+    },
+    {
+      title: "Plant Species Recognition",
+      screen: "PlantSpeciesRecognition",
+      isCompleted: false,
+    },
+    {
+      title: "Traffic Sign Recognition",
+      screen: "TrafficSignRecognition",
+      isCompleted: false,
+    },
+    {
+      title: "Food Classification",
+      screen: "FoodClassification",
+      isCompleted: false,
+    },
     {
       title: "Bird Species Classification",
       screen: "BirdSpeciesClassification",
+      isCompleted: false,
     },
-    { title: "Comment sentiment analyzer", screen: "sentiment" },
+    {
+      title: "Comment sentiment analyzer",
+      screen: "sentiment",
+      isCompleted: true,
+    },
   ];
 
   const handlePress = (screen) => {
@@ -135,6 +163,7 @@ const ListProject = ({ projects, handlePress }) => {
   return (
     <View style={styles.container}>
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={projects}
         renderItem={({ item }) => (
           <TouchableOpacity
@@ -142,6 +171,11 @@ const ListProject = ({ projects, handlePress }) => {
             style={styles.item}
           >
             <Text style={styles.title}>{item.title}</Text>
+            {item.isCompleted ? (
+              <MaterialIcons name="done-all" size={20} />
+            ) : (
+              <MaterialIcons name="remove-done" size={20} />
+            )}
           </TouchableOpacity>
         )}
         keyExtractor={(item) => item.screen}
@@ -162,6 +196,8 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     borderRadius: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   title: {
     fontSize: 18,
