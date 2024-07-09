@@ -12,7 +12,7 @@
 
 ## Output
 
-![image](images/o.png)
+![image](images/0.png)
 
 ## Technologies Used
 
