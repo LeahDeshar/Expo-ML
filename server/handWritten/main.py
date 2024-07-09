@@ -2,14 +2,12 @@
 from fastapi import FastAPI, UploadFile, File
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
 import numpy as np
 import io
 import cv2
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
-from sklearn.externals import joblib
 
 
 
@@ -23,8 +21,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 # Load your trained model
-# model = load_model("handWritten.keras")
-model = joblib.load('handWritten.keras"')
+model = load_model("handWritten.keras")
+# model = joblib.load('handWritten.keras"')
 # Define Pydantic model for predictions
 class Prediction(BaseModel):
     prediction: int
