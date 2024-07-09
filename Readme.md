@@ -6,6 +6,8 @@
 
 **Restaurant Review Prediction** -> [code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/restaurant/model.ipynb)
 
+**Handwritten Digit Recognition** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/handWritten/main.ipynb)
+
 <!-- insert link -->
 
 ## Output
