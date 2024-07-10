@@ -8,6 +8,8 @@
 
 **Handwritten Digit Recognition** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/handWritten/main.ipynb)
 
+**Text Classification With RNN** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/TextClassification/main.ipynb)
+
 <!-- insert link -->
 
 ## Output
