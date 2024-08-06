@@ -42,6 +42,13 @@ const Layout = () => {
               headerBackTitleVisible: false,
             }}
           />
+          <Stack.Screen
+            name="TextClassification"
+            options={{
+              title: "Text Classification with CNN",
+              headerBackTitleVisible: false,
+            }}
+          />
         </Stack>
       </ThemeProvider>
     </Provider>

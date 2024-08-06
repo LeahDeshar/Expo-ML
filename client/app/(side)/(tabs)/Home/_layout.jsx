@@ -91,7 +91,7 @@ const HomeScreen = () => {
     {
       title: "Handwritten Digit Recognition",
       screen: "Handwrite",
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       title: "NLP: Text Summarization",
@@ -103,7 +103,11 @@ const HomeScreen = () => {
       screen: "restaurant",
       isCompleted: true,
     },
-
+    {
+      title: "Text Classification with CNN",
+      screen: "TextClassification",
+      isCompleted: true,
+    },
     {
       title: "Image Classification with CIFAR-10",
       screen: "ImageClassificationCIFAR10",
