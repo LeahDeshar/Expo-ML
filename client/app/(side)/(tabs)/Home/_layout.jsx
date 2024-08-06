@@ -1,76 +1,3 @@
-// import React from "react";
-// import {
-//   View,
-//   Text,
-//   Button,
-//   StyleSheet,
-//   FlatList,
-//   TouchableOpacity,
-//   Alert,
-// } from "react-native";
-// import { useRouter } from "expo-router";
-// import { useTheme } from "../../../../constants/ThemeProvider";
-
-// const HomeScreen = () => {
-//   const { colors, setScheme, dark } = useTheme();
-//   const navigator = useRouter();
-
-//   const projects = [
-//     "Handwritten Digit Recognition",
-//     "Image Classification with CIFAR-10",
-//     "Face Detection",
-//     "Object Detection with YOLO (You Only Look Once)",
-//     "Emotion Detection from Facial Expressions",
-//     "Dog Breed Classification",
-//     "Plant Species Recognition",
-//     "Traffic Sign Recognition",
-//     "Food Classification",
-//     "Bird Species Classification",
-//     "Comment sentiment analyzer",
-//   ];
-//   const handlePress = (title) => {
-//     Alert.alert("Project Selected", title);
-//   };
-//   return <ListProject projects={projects} handlePress={handlePress} />;
-// };
-// const ListProject = ({ projects, handlePress }) => {
-//   return (
-//     <View style={styles.container}>
-//       <FlatList
-//         data={projects}
-//         renderItem={({ item }) => (
-//           <TouchableOpacity
-//             onPress={() => handlePress(item)}
-//             style={styles.item}
-//           >
-//             <Text style={styles.title}>{item}</Text>
-//           </TouchableOpacity>
-//         )}
-//         keyExtractor={(item) => item.key}
-//       />
-//     </View>
-//   );
-// };
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     justifyContent: "center",
-//     padding: 20,
-//   },
-//   item: {
-//     backgroundColor: "#adddff",
-//     padding: 20,
-//     marginVertical: 8,
-//     borderRadius: 10,
-//   },
-//   title: {
-//     fontSize: 18,
-//   },
-// });
-
-// export default HomeScreen;
-
 import React from "react";
 import {
   View,
@@ -81,7 +8,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useTheme } from "../../../../constants/ThemeProvider";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Feather, Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 const HomeScreen = () => {
   const { colors, setScheme, dark } = useTheme();
@@ -104,8 +31,13 @@ const HomeScreen = () => {
       isCompleted: true,
     },
     {
-      title: "Text Classification with CNN",
+      title: "Spam Detection with CNN",
       screen: "TextClassification",
+      isCompleted: true,
+    },
+    {
+      title: "Comment sentiment analyzer",
+      screen: "sentiment",
       isCompleted: true,
     },
     {
@@ -149,11 +81,6 @@ const HomeScreen = () => {
       screen: "BirdSpeciesClassification",
       isCompleted: false,
     },
-    {
-      title: "Comment sentiment analyzer",
-      screen: "sentiment",
-      isCompleted: true,
-    },
   ];
 
   const handlePress = (screen) => {
@@ -170,16 +97,22 @@ const ListProject = ({ projects, handlePress }) => {
         showsVerticalScrollIndicator={false}
         data={projects}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            onPress={() => handlePress(item.screen)}
-            style={styles.item}
-          >
-            <Text style={styles.title}>{item.title}</Text>
-            {item.isCompleted ? (
-              <MaterialIcons name="done-all" size={20} />
-            ) : (
-              <MaterialIcons name="remove-done" size={20} />
-            )}
+          <TouchableOpacity onPress={() => handlePress(item.screen)}>
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+              }}
+            >
+              {item.isCompleted ? (
+                <Feather name="check-circle" size={20} />
+              ) : (
+                <Feather name="circle" size={20} />
+              )}
+              <View style={styles.item}>
+                <Text style={styles.title}>{item.title}</Text>
+              </View>
+            </View>
           </TouchableOpacity>
         )}
         keyExtractor={(item) => item.screen}
@@ -200,8 +133,10 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     borderRadius: 10,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flex: 1,
+    marginLeft: 10,
+    // flexDirection: "row",
+    // justifyContent: "space-between",
   },
   title: {
     fontSize: 18,
