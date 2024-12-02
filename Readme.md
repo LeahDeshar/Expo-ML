@@ -4,6 +4,8 @@
 
 **NPL: Text Processing With Twitter Data**
 
+**NPL: Sentiment Analysis (Mental Health)**
+
 **Restaurant Review Prediction** -> [code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/restaurant/model.ipynb)
 
 **Handwritten Digit Recognition** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/handWritten/main.ipynb)
