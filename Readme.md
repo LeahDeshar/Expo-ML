@@ -1,16 +1,14 @@
 # Machine Learning Projects with Expo
 
-<!-- list the project with link of code -->
-
 **NPL: Text summarization** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/textsummary/main.ipynb)
+
+**NPL: Text Processing With Twitter Data**
 
 **Restaurant Review Prediction** -> [code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/restaurant/model.ipynb)
 
 **Handwritten Digit Recognition** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/handWritten/main.ipynb)
 
 **Spam Detection With CNN** ->[code](https://github.com/LeahDeshar/Expo-ML/blob/master/server/TextClassification/main.ipynb)
-
-<!-- insert link -->
 
 ## Output
 
